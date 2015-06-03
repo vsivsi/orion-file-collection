@@ -47,7 +47,7 @@ that is justifiably very popular, but given that Orion's filesystem package
 already provides a general abstraction for files within the CMS, the additional
 generality provided by CollectionFS is largely wasted in this application. And
 that generality doesn't come cheaply... Below is the list of packages that are
-addedto your application when orion-gridFS + CollectionFS are added!
+added to your application when orion-gridFS + CollectionFS are added!
 
 ```
 brightbind:orion-gridfs  added, version 0.1.0
