@@ -11,7 +11,8 @@ meteor add vsivsi:orion-file-collection
 
 This package uses the Meteor
 [vsivsi:file-collection](https://atmospherejs.com/vsivsi/file-collection)
-package to provide file upload and storage in the mongoDB instance using gridFS.
+package to provide file upload and storage for the Orion CMS in the mongoDB
+instance using [gridFS](http://docs.mongodb.org/manual/reference/gridfs/).
 
 Built-in Chunked upload support is provided using the stable and popular
 [resumable.js](http://resumablejs.com/) library.
