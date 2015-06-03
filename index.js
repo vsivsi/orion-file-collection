@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
-//  Copyright (C) 2014-2015 by Vaughn Iverson
-//  meteor-file-sample-app is free software released under the MIT/X11 license.
+//  Copyright (C) 2015 by Vaughn Iverson
+//  orion-file-collection is free software released under the MIT/X11 license.
 //  See included LICENSE file for details.
 ////////////////////////////////////////////////////////////////////////////////
 

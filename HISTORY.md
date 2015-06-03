@@ -1,6 +1,5 @@
-Orion file-collection
-=====================
+## Revision history
 
-## 0.1.0
+### 0.1.0
 
-- initial version
+* initial version

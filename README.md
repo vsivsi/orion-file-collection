@@ -1,14 +1,13 @@
-file-collection Storage Provider for Orion Filesystem
-=====================================================
+## file-collection Storage Provider for Orion Filesystem
 
-## Installation
+### Installation
 
 Install the package
 ```
 meteor add vsivsi:orion-file-collection
 ```
 
-## Details
+### Details
 
 This package uses the Meteor
 [vsivsi:file-collection](https://atmospherejs.com/vsivsi/file-collection)
@@ -20,7 +19,7 @@ Built-in Chunked upload support is provided using the stable and popular
 In this initial version, there are no rules limiting the type or size of
 files, or restricting the roles of users to upload and remove files.
 
-## Why file-collection?
+### Why file-collection?
 
 This package was inspired by another Orion filesystem gridFS package
 [orion-gridFS](https://github.com/brightbind/orion-gridFS), but differs
