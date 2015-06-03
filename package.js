@@ -1,6 +1,6 @@
 Package.describe({
   name: 'vsivsi:orion-file-collection',
-  summary: 'MongoDB gridFS support for orion:filesystem',
+  summary: 'MongoDB gridFS support for orionjs:filesystem',
   version: '0.1.0',
   git: 'https://github.com/vsivsi/orion-file-collection'
 });
