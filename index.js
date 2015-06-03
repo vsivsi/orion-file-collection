@@ -62,7 +62,7 @@ if (Meteor.isClient) {
    // Finish the upload progress in the session variable
    fc.resumable.on('fileSuccess', function (resFile) {
       var fileUrl = Meteor.absoluteUrl() + "gridfs/data/id/" + resFile.uniqueIdentifier;
-      console.log("Success!", resFile, fileUrl);
+      // console.log("Success!", resFile, fileUrl);
       resFile.file._orionCallbacks.success(fileUrl, { gridFS_id: resFile.uniqueIdentifier } );
       return;
    });
@@ -76,7 +76,6 @@ if (Meteor.isClient) {
 
    orion.filesystem.providerUpload = function(options, success, failure, progress) {
      // Handle multiple files upload
-     console.log(options.fileList, typeof options.fileList);
      for (var x=0; x<options.fileList.length; x++) {
         var file = options.fileList[x];
         // This lets the event handlers above invoke the correct callbacks
@@ -97,7 +96,7 @@ if (Meteor.isClient) {
         console.warn('error', err);
         failure(err);
       } else {
-        console.log('remove success');
+      //   console.log('remove success');
         success();  // remove record in orion
       };
     });
