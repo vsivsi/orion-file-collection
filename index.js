@@ -61,7 +61,7 @@ if (Meteor.isClient) {
 
    // Finish the upload progress in the session variable
    fc.resumable.on('fileSuccess', function (resFile) {
-      var fileUrl = Meteor.absoluteUrl() + "gridfs/data/id/" + resFile.uniqueIdentifier;
+      var fileUrl = /* JJR Meteor.absoluteUrl()*/'/' + "gridfs/data/id/" + resFile.uniqueIdentifier;
       // console.log("Success!", resFile, fileUrl);
       resFile.file._orionCallbacks.success(fileUrl, { gridFS_id: resFile.uniqueIdentifier } );
       return;
