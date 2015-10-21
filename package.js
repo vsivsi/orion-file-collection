@@ -1,7 +1,7 @@
 Package.describe({
   name: 'vsivsi:orion-file-collection',
   summary: 'MongoDB gridFS support for orionjs:filesystem',
-  version: '0.2.0',
+  version: '0.2.1',
   git: 'https://github.com/vsivsi/orion-file-collection'
 });
 
@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use([
     'orionjs:core@1.0.0',
     'orionjs:filesystem@1.0.1',
-    'vsivsi:file-collection@1.1.1'
+    'vsivsi:file-collection@1.2.0'
     ]);
 
   api.addFiles([
