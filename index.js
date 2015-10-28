@@ -55,7 +55,7 @@ if (Meteor.isClient) {
 
    // Update the upload progress session variable
    fc.resumable.on('fileProgress', function (resFile) {
-      resFile.file._orionCallbacks.progress(resFile.progress());
+      resFile.file._orionCallbacks.progress(resFile.progress() * 100);
       return;
    });
 
