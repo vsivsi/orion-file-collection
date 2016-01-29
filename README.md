@@ -7,9 +7,6 @@ Install the package
 meteor add vsivsi:orion-file-collection
 ```
 
-### New in latest version (v1.2.0)
-This package now uses a relative URL to the assets. This allow multiple apps (thus multiple domains) to access the same assets (from the database). In previous versions the full URL was stored, and as such, the assets where inaccessable when changing the main app URL.
-
 ### Details
 
 This package uses the Meteor

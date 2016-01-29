@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-//  Copyright (C) 2015 by Vaughn Iverson
+//  Copyright (C) 2015-2016 by Vaughn Iverson
 //  orion-file-collection is free software released under the MIT/X11 license.
 //  See included LICENSE file for details.
 ////////////////////////////////////////////////////////////////////////////////
@@ -10,7 +10,7 @@ var fc = new FileCollection("data", {
       http: [{
                method: 'get',
                path: '/id/:_id',
-               lookup: function (params, query) { return { _id: params._id }}
+               lookup: function (params, query) { return { _id: params._id }; }
             }]
     });
 
@@ -98,7 +98,7 @@ if (Meteor.isClient) {
       } else {
       //   console.log('remove success');
         success();  // remove record in orion
-      };
+      }
     });
-  }
+  };
 }
