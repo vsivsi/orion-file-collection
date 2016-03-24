@@ -1,5 +1,9 @@
 ## Revision history
 
+### 0.2.4
+
+* Exported the FileCollection as 'orionFileCollection'
+
 ### 0.2.3
 
 * Bumped version of vsivsi:file-collection to 1.3.0
