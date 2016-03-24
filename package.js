@@ -18,6 +18,7 @@ Package.onUse(function(api) {
     'index.js'
     ]);
 
+    api.export('orionFileCollection');
 });
 
 Package.onTest(function(api) {

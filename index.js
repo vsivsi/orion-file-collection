@@ -14,6 +14,8 @@ var fc = new FileCollection("data", {
             }]
     });
 
+orionFileCollection=fc;
+
 if (Meteor.isServer) {
    // These need to be tightened down to enforce
    fc.allow({
@@ -55,22 +57,21 @@ if (Meteor.isClient) {
 
    // Update the upload progress session variable
    fc.resumable.on('fileProgress', function (resFile) {
-      resFile.file._orionCallbacks.progress(resFile.progress() * 100);
+      if (resFile.file._orionCallbacks && resFile.file._orionCallbacks.progress) resFile.file._orionCallbacks.progress(resFile.progress() * 100);
       return;
    });
 
    // Finish the upload progress in the session variable
    fc.resumable.on('fileSuccess', function (resFile) {
       var fileUrl = /* JJR Meteor.absoluteUrl()*/'/' + "gridfs/data/id/" + resFile.uniqueIdentifier;
-      // console.log("Success!", resFile, fileUrl);
-      resFile.file._orionCallbacks.success(fileUrl, { gridFS_id: resFile.uniqueIdentifier } );
+      if (resFile.file._orionCallbacks && resFile.file._orionCallbacks.success) resFile.file._orionCallbacks.success(fileUrl, { gridFS_id: resFile.uniqueIdentifier } );
       return;
    });
 
    // More robust error handling needed!
    fc.resumable.on('fileError', function (resFile, msg) {
       console.warn("Error uploading", resFile.uniqueIdentifier);
-      resFile.file._orionCallbacks.failure(new Error(msg));
+      if (resFile.file._orionCallbacks && resFile.file._orionCallbacks.failure) resFile.file._orionCallbacks.failure(new Error(msg));
       return;
    });
 
